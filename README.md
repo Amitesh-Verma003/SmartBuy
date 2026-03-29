@@ -1,16 +1,96 @@
-# React + Vite
+# SmartBuy — Pre-Purchase Intelligence Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern fintech dashboard for smarter shopping decisions. Built with **React + Vite + Tailwind CSS + Recharts**.
 
-Currently, two official plugins are available:
+![SmartBuy Dashboard](https://img.shields.io/badge/React-18-blue?logo=react) ![Vite](https://img.shields.io/badge/Vite-5-purple?logo=vite) ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-teal?logo=tailwindcss)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📊 **Shopping Dashboard** — KPI cards, price history chart, live watchlist table, deals strip
+- 💳 **Card Benefits Teller** — Category-based credit card ranking engine (Flights, Dining, Grocery, etc.)
+- 📈 **Price Chart** — 7d / 30d / 90d toggle with Recharts, custom tooltip, alert reference line
+- 🔔 **Notifications** — Bell badge, alert status badges per watchlist item
+- 🧭 **Sidebar Navigation** — Fixed dark sidebar with active state highlighting
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+| Package | Purpose |
+|---|---|
+| React 18 + Vite | Frontend framework + build tool |
+| Tailwind CSS v3 | Utility-first styling |
+| Recharts | Price history charts |
+| React Router DOM | Client-side navigation |
+| Lucide React | Icon library |
+| Framer Motion | Animations |
+
+---
+
+## Getting Started
+
+### Prerequisites
+Install **Node.js v18+** from [https://nodejs.org](https://nodejs.org)
+
+### Run Locally
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Amitesh-Verma003/SmartBuy.git
+
+# 2. Navigate into the folder
+cd SmartBuy
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Pages
+
+| Route | Page |
+|---|---|
+| `/` | Shopping Dashboard |
+| `/card-benefits` | Card Benefits Teller |
+
+---
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Sidebar.jsx        # Fixed dark sidebar with nav links
+│   ├── Header.jsx         # Top bar with search + notifications
+│   ├── MetricCards.jsx    # 4 KPI summary cards
+│   ├── WatchlistTable.jsx # Product tracking table
+│   ├── PriceChart.jsx     # Recharts line chart with toggles
+│   ├── DealsStrip.jsx     # Horizontal scrollable deals cards
+│   └── CardBenefits.jsx   # Card ranking engine with category chips
+├── pages/
+│   ├── ShoppingDashboard.jsx
+│   └── CardBenefitsPage.jsx
+├── App.jsx                # Router + layout shell
+├── main.jsx               # Entry point
+└── index.css              # Global styles + Tailwind directives
+```
+
+---
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+Output is generated in the `dist/` folder. Deploy to Vercel, Netlify, or any static host.
+
+---
+
+Built for **DTU Hackathon 2026** 🚀
